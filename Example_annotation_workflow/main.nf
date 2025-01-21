@@ -18,11 +18,14 @@ nextflow.enable.dsl=2
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // VALIDATE INPUTS
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-include { validateParameters; paramsSummaryLog; samplesheetToList } from 'plugin/nf-schema'
+include { validateParameters; paramsSummaryLog; paramsSummaryMap; samplesheetToList } from 'plugin/nf-schema'
 
 // Validate input parameters
 validateParameters()
 log.info paramsSummaryLog(workflow)
+
+//Print param summary map:
+println paramsSummaryMap(workflow)
 
 include { GET_GENOME_FTP_FILES } from './modules/get_genome_ftp_files.nf'
 include { CONVERT_TO_PARQUET } from './modules/convert_to_parquet.nf'
