@@ -26,7 +26,7 @@
                     "type": "string",
                     "pattern": "^[0-9]\\.[0-9]{1,2}\\.[0-9]--[0-9]$",
                     "description": "Version of adam genomics (linked to <tag>)",
-                    "default": "0.30.0--0"
+                    "default": "1.0.1--0"
                 },
                 "scripts_dir": {
                     "type": "string",
@@ -78,8 +78,7 @@
             "properties": {
                 "user": {
                     "type": "string",
-                    "description": "User name linked to current User `whoami`.",
-                    "default": "lcampbell"
+                    "description": "User name linked to current User `whoami`."
                 },
                 "email": {
                     "type": "string",
