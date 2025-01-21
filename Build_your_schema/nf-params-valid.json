@@ -1,0 +1,11 @@
+{
+    "base_ftp_url":"https://ftp.ensembl.org/pub",
+    "run_example_demo": true,
+    "adam_version": "1.0.1--0",
+    "input_csv": "demo_input.csv",
+    "outdir": "./demo_outdir",
+    "trace_report_suffix": "demo-trace",
+    "user": "$USER",
+    "email": "lcampbell@ebi.ac.uk",
+    "send_report": true
+}

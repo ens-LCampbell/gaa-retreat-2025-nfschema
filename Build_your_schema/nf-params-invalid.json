@@ -1,0 +1,10 @@
+{
+    "base_ftp_url": "url",
+    "run_example_demo": 1,
+    "adam_version": "v1.0.1--0",
+    "input_csv": "test_input.txt",
+    "outdir": "demo_outdir",
+    "trace_report_suffix": "demo-trace",
+    "email": "lcampbell@ebi.ac.uk",
+    "send_report": true
+}

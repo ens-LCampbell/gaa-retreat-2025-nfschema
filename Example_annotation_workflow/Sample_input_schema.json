@@ -1,0 +1,33 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://raw.githubusercontent.com/nf-core/rnaseq/master/assets/schema_input.json",
+    "title": "NF-schema GAA demo - params.input_genome_csv schema",
+    "description": "Schema for the file provided with input_genome_csv",
+    "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "species": {
+                    "type": "string",
+                    "pattern": "^\\S+_\\S+$",
+                    "errorMessage": "Species Binomial name.",
+                    "meta": "species"
+                },
+                "common": {
+                    "type": "string",
+                    "errorMessage": "Common associated with species.",
+                    "meta": "common"
+                },
+                "build": {
+                    "type": "string",
+                    "errorMessage": "The genome feature build version",
+                    "meta": "build"
+                },
+                "ensembl_version": {
+                    "type": "integer",
+                    "errorMessage": "Ensembl release version.",
+                    "meta": "ensembl_version"
+                }
+        }
+    }
+}
