@@ -1,34 +1,38 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://raw.githubusercontent.com///nextflow_schema.json",
-    "title": " pipeline parameters",
-    "description": "",
+    "title": "GAA-Retreat, Breakout8: NXF params validation",
+    "description": "nf-schema validation example schema",
     "type": "object",
     "$defs": {
         "pipeline_runtime_options": {
             "title": "Pipeline runtime options",
             "type": "object",
-            "description": "A generic sampl schema for this workflow",
+            "description": "A generic sample schema for this workflow",
             "default": "",
             "properties": {
                 "base_ftp_url": {
                     "type": "string",
                     "pattern": "^https://[a-z]+\\.[a-z]+\\.[a-z]+/[a-z]+$",
+                    "description": "Base Ensembl FTP URL hosting GFF3 files (Genomic, Regulation, Motif, EMAR)",
                     "default": "https://ftp.ensembl.org/pub"
                 },
                 "run_example_demo": {
                     "type": "boolean",
+                    "description": "Dummy param to run the full workflow.",
                     "default": true
                 },
                 "adam_version": {
                     "type": "string",
                     "pattern": "^[0-9]\\.[0-9]{1,2}\\.[0-9]--[0-9]$",
+                    "description": "Version of adam genomics (linked to <tag>)",
                     "default": "0.30.0--0"
                 },
                 "scripts_dir": {
                     "type": "string",
                     "format": "directory-path",
                     "pattern": "((?:[^/]*/)*)(.*)",
+                    "description": "Path location of workflow scripts",
                     "default": "./scripts",
                     "hidden": true
                 }
@@ -52,13 +56,14 @@
                 "input_csv": {
                     "type": "string",
                     "pattern": "^[a-z,A-Z,_,0-9]+.[ct](sv)$",
+                    "description": "Input metadata, containing species, build and ensembl version information.",
                     "format": "file-path"
                 },
                 "outdir": {
                     "type": "string",
                     "format": "directory-path",
                     "pattern": "((?:[^/]*/)*)(.*)",
-                    "description": "The output directory where the results will be saved. You have to use absolute paths to storage on Cloud infrastructure.",
+                    "description": "The output directory where the results will be saved.",
                     "fa_icon": "fas fa-folder-open",
                     "default": "./demo_outdir"
                 }
@@ -73,24 +78,28 @@
             "properties": {
                 "user": {
                     "type": "string",
+                    "description": "User name linked to current User `whoami`.",
                     "default": "lcampbell"
                 },
                 "email": {
                     "type": "string",
+                    "description": "Email address to send log trace report.",
                     "pattern": "^[a-zA-Z_-]+@[a-zA-Z\\\\.]+$"
                 },
                 "send_report": {
+                    "description": "Enable trace report email report.",
                     "type": "boolean"
                 },
                 "cacheDir": {
                     "type": "string",
                     "format": "directory-path",
+                    "description": "Location of cache directory to store intermediate.",
                     "default": "./cache"
                 },
                 "trace_report_suffix": {
                     "type": "string",
                     "fa_icon": "far calendar",
-                    "description": "Suffix to add to the trace report filename. Default is the date and time in the format yyyy-MM-dd_HH-mm-ss.",
+                    "description": "Suffix to add to the trace report filename. Format: yyyy-MM-dd_HH-mm-ss.",
                     "hidden": true,
                     "default": "validation-breakout-work-trace"
                 }

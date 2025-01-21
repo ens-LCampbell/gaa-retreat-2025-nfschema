@@ -1,0 +1,138 @@
+<h1>GAA-Retreat, Breakout8: NXF params validation</h1>
+<p>nf-schema validation example schema</p>
+<h2>Pipeline runtime options</h2>
+<p>A generic sample schema for this workflow</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Required</th>
+<th>Hidden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>base_ftp_url</code></td>
+<td>Base Ensembl FTP URL hosting GFF3 files (Genomic, Regulation, Motif, EMAR)</td>
+<td><code>string</code></td>
+<td>https://ftp.ensembl.org/pub</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td><code>run_example_demo</code></td>
+<td>Dummy param to run the full workflow.</td>
+<td><code>boolean</code></td>
+<td>True</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td><code>adam_version</code></td>
+<td>Version of adam genomics (linked to <tag>)</td>
+<td><code>string</code></td>
+<td>0.30.0--0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>scripts_dir</code></td>
+<td>Path location of workflow scripts</td>
+<td><code>string</code></td>
+<td>./scripts</td>
+<td></td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h2>Input/output options</h2>
+<p>Define where the pipeline should find input data and save output data.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Required</th>
+<th>Hidden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>input_csv</code></td>
+<td>Input metadata, containing species, build and ensembl version information.</td>
+<td><code>string</code></td>
+<td></td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td><code>outdir</code></td>
+<td>The output directory where the results will be saved.</td>
+<td><code>string</code></td>
+<td>./demo_outdir</td>
+<td>True</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Generic options</h2>
+<p>Less common options for the pipeline, typically set in a config file.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+<th>Type</th>
+<th>Default</th>
+<th>Required</th>
+<th>Hidden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user</code></td>
+<td>User name linked to current User <code>whoami</code>.</td>
+<td><code>string</code></td>
+<td>lcampbell</td>
+<td>True</td>
+<td></td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td>Email address to send log trace report.</td>
+<td><code>string</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>send_report</code></td>
+<td>Enable trace report email report.</td>
+<td><code>boolean</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>cacheDir</code></td>
+<td>Location of cache directory to store intermediate.</td>
+<td><code>string</code></td>
+<td>./cache</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>trace_report_suffix</code></td>
+<td>Suffix to add to the trace report filename. Format: yyyy-MM-dd_HH-mm-ss.</td>
+<td><code>string</code></td>
+<td>validation-breakout-work-trace</td>
+<td></td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
